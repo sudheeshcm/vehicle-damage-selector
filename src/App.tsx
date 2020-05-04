@@ -1,24 +1,35 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import Grid, { GridSpacing } from "@material-ui/core/Grid";
+
+import CarTopView from "./carTopView";
+import "./App.css";
+
+import { INITIAL_DAMAGES, DAMAGE_TYPES, SEVERITY } from "./constants";
+import DamageSelector from "./damageSelector";
+import classes from "*.module.css";
 
 function App() {
+  const [damages, setDamages] = useState(INITIAL_DAMAGES);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+      <div className="App-wrapper">
         <p>
-          Edit <code>src/App.tsx</code> and save to reload.
+          Car damages: <code>top view</code>
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+        <Grid container xs={12} spacing={4} className="Grid-container">
+          <Grid item xs={7} justify="center">
+            <CarTopView damages={damages} />
+          </Grid>
+          <Grid item xs={5} justify="center">
+            <DamageSelector
+              damage={damages.frontBonnet}
+              setDamage={() => null}
+            />
+          </Grid>
+        </Grid>
+      </div>
     </div>
   );
 }
