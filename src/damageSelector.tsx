@@ -6,27 +6,30 @@ import MenuItem from "@material-ui/core/MenuItem";
 import FormControl from "@material-ui/core/FormControl";
 import Select from "@material-ui/core/Select";
 
+import { toTitleCase, toReadableString } from "./utils";
 import { IDamage } from "./types";
-import { INITIAL_DAMAGES, DAMAGE_TYPES, SEVERITY } from "./constants";
+import { DAMAGE_TYPES, SEVERITY } from "./constants";
 
 interface Props {
+  selectedPart: string;
   damage: IDamage;
   setDamage: Function;
 }
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
+    title: { userSelect: "none" },
     formControl: {
       margin: theme.spacing(1),
       minWidth: 120,
       width: "200px",
-      "& label": { color: "white" },
+      "& label": { color: "white", userSelect: "none" },
       "& .MuiOutlinedInput-notchedOutline": { borderColor: "white" },
       "& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline": {
         borderColor: "white",
       },
     },
-    select: { color: "white" },
+    select: { color: "white", userSelect: "none" },
     outlinedSelect: { borderColor: "white" },
     selectEmpty: { marginTop: theme.spacing(2) },
     fieldsWrapper: {
@@ -39,7 +42,7 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 );
 
-function DamageSelector({ damage, setDamage }: Props) {
+function DamageSelector({ selectedPart, damage, setDamage }: Props) {
   const classes = useStyles();
 
   const [curDamage, setCurDamage] = useState<IDamage>(damage);
@@ -70,7 +73,9 @@ function DamageSelector({ damage, setDamage }: Props) {
 
   return (
     <div className="damage-selector__wrapper">
-      <h5>Damage</h5>
+      <h5 className={classes.title}>
+        Damage: {toReadableString(selectedPart)}
+      </h5>
       <div className={classes.fieldsWrapper}>
         <FormControl variant="outlined" className={classes.formControl}>
           <InputLabel id="demo-simple-select-outlined-label">
@@ -106,7 +111,7 @@ function DamageSelector({ damage, setDamage }: Props) {
           >
             {SEVERITY.map((severity: string) => (
               <MenuItem key={severity} value={severity}>
-                {severity}
+                {toTitleCase(severity)}
               </MenuItem>
             ))}
           </Select>
@@ -116,6 +121,7 @@ function DamageSelector({ damage, setDamage }: Props) {
           variant="contained"
           color="primary"
           classes={{ root: classes.button }}
+          onClick={onSubmit}
         >
           Save
         </Button>

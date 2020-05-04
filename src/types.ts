@@ -4,6 +4,5 @@ export interface IDamage {
     damageType: string;
 }
 
-export interface CarProps {
-    damages: { [part: string]: IDamage };
-}
+export interface IDamages { [part: string]: IDamage };
+export interface IGenericMap { [key: string]: string };
