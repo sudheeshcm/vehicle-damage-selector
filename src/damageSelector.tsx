@@ -54,21 +54,17 @@ function DamageSelector({ selectedPart, damage, setDamage }: Props) {
   }, [damage]);
 
   const handleTypeChange = (event: ChangeEvent<{ value: unknown }>) => {
-    setCurDamage({
+    setDamage({
       ...curDamage,
       damageType: event.target.value as string,
     });
   };
 
   const handleSeverityChange = (event: ChangeEvent<{ value: unknown }>) => {
-    setCurDamage({
+    setDamage({
       ...curDamage,
       severity: event.target.value as string,
     });
-  };
-
-  const onSubmit = () => {
-    setDamage(curDamage);
   };
 
   return (
@@ -116,15 +112,6 @@ function DamageSelector({ selectedPart, damage, setDamage }: Props) {
             ))}
           </Select>
         </FormControl>
-
-        <Button
-          variant="contained"
-          color="primary"
-          classes={{ root: classes.button }}
-          onClick={onSubmit}
-        >
-          Save
-        </Button>
       </div>
     </div>
   );

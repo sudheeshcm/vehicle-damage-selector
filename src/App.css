@@ -23,9 +23,8 @@ div.Grid-container {
 }
 
 .Grid-damage {
-  transition: 1s;
   opacity: 0;
-  transition: opacity 2s;
+  transition: 1s;
 }
 
 .Grid-damage.visible {

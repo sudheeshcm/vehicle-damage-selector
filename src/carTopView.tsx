@@ -169,6 +169,7 @@ function CarTopView(props: CarProps & SVGProps<SVGSVGElement>) {
       {/* Rear right tyre */}
       <LightTooltip title="Rear right tyre">
         <rect
+          className={styles.part}
           onClick={() => onPartClick("rearRightTyre")}
           fillRule="evenodd"
           rx={8.585}
@@ -196,6 +197,7 @@ function CarTopView(props: CarProps & SVGProps<SVGSVGElement>) {
       {/* Front right tyre */}
       <LightTooltip title="Front right tyre">
         <rect
+          className={styles.part}
           onClick={() => onPartClick("frontRightTyre")}
           fillRule="evenodd"
           rx={8.585}
@@ -211,6 +213,7 @@ function CarTopView(props: CarProps & SVGProps<SVGSVGElement>) {
       {/* Front left tyre */}
       <LightTooltip title="Front left tyre">
         <rect
+          className={styles.part}
           onClick={() => onPartClick("frontLeftTyre")}
           fillRule="evenodd"
           rx={8.585}
@@ -243,6 +246,7 @@ function CarTopView(props: CarProps & SVGProps<SVGSVGElement>) {
       {/* Front bonnet */}
       <LightTooltip title="Front bonnet">
         <path
+          className={styles.part}
           onClick={() => onPartClick("frontBonnet")}
           d="M37.198 44.521c-11.667 18.667-10.816 196.22 7.851 210.22 18.03-14.851 122.48-28.646 142.34-27.364 20.288-1.492 99.694 8.055 124.09 22.697 6.577 2.13 19.727-205.55 1.059-219.55-58.34-16.344-252.01-16.344-275.34 13.99z"
           strokeOpacity={0.459}
@@ -260,6 +264,7 @@ function CarTopView(props: CarProps & SVGProps<SVGSVGElement>) {
       />
       <LightTooltip title="Front windshield">
         <path
+          className={styles.part}
           onClick={() => onPartClick("frontWindshield")}
           d="M45.51 260.2s63.783-24.762 134.95-25.395c64.078-.59 93.017 8.859 132 23.033-4.724 44.885-9.449 87.405-21.261 101.58-108.67-25.986-115.75-25.985-224.42.001-2.362-14.174-23.623-96.856-21.261-99.218z"
           fillRule="evenodd"
@@ -277,6 +282,7 @@ function CarTopView(props: CarProps & SVGProps<SVGSVGElement>) {
       />
       <LightTooltip title="Rear windshield">
         <path
+          className={styles.part}
           onClick={() => onPartClick("rearWindshield")}
           d="M80.945 536.59c-11.812 56.695-21.261 165.36-21.261 165.36 18.899 16.536 115.75 23.623 118.12 23.623 7.087 0 103.94-7.087 120.48-30.71 0-14.174-9.45-115.75-18.899-160.64-82.681 11.811-193.71 7.087-198.44 2.362z"
           fillRule="evenodd"
@@ -289,6 +295,7 @@ function CarTopView(props: CarProps & SVGProps<SVGSVGElement>) {
       {/* Right mirror */}
       <LightTooltip title="Right mirror">
         <path
+          className={styles.part}
           onClick={() => onPartClick("rightMirror")}
           d="M321.9 279.09l28.348 2.362s14.174 14.174 4.725 21.261c-9.45 7.087-33.073-2.362-33.073-2.362V279.09z"
           strokeOpacity={0.553}
@@ -302,6 +309,7 @@ function CarTopView(props: CarProps & SVGProps<SVGSVGElement>) {
       {/* Left mirror */}
       <LightTooltip title="Left mirror">
         <path
+          className={styles.part}
           onClick={() => onPartClick("leftMirror")}
           d="M36.946 283.82l-28.348 2.362s-14.174 14.174-4.725 21.261c9.45 7.087 33.073-2.362 33.073-2.362V283.82z"
           strokeOpacity={0.547}
@@ -315,6 +323,7 @@ function CarTopView(props: CarProps & SVGProps<SVGSVGElement>) {
       {/* Left headlamp */}
       <LightTooltip title="Left headlamp">
         <path
+          className={styles.part}
           onClick={() => onPartClick("leftHeadlamp")}
           d="M52.582 17.025c-9.023 1.573-19.32 18.998-14.584 21.902 11.281-5.689 33.327-13.506 54.984-15.684 4.286-2.3 10.138-9.356 10.358-10.929-14.886-.847-40.915 2.775-50.758 4.711z"
           strokeOpacity={0.252}
@@ -329,6 +338,7 @@ function CarTopView(props: CarProps & SVGProps<SVGSVGElement>) {
       {/* Right headlamp */}
       <LightTooltip title="Right headlamp">
         <path
+          className={styles.part}
           onClick={() => onPartClick("rightHeadlamp")}
           d="M298.7 12.115c9.023 1.573 19.32 14.633 14.584 17.537-11.28-5.689-33.327-7.505-54.984-9.684-4.285-2.3-10.134-10.992-10.36-12.565 14.888-.847 40.917 2.776 50.76 4.712z"
           strokeOpacity={0.252}
@@ -350,6 +360,7 @@ function CarTopView(props: CarProps & SVGProps<SVGSVGElement>) {
       />
       <LightTooltip title="Front grill">
         <path
+          className={styles.part}
           onClick={() => onPartClick("frontGrill")}
           d="M112.29 13.108c37.098-6.547 99.837-6.002 126.57-2.729M112.29 16.381c37.098-6.547 99.837-6.002 126.57-2.729M112.29 20.2c37.098-6.001 98.2-4.911 124.39-3.275"
           strokeOpacity={0.371}
@@ -362,13 +373,14 @@ function CarTopView(props: CarProps & SVGProps<SVGSVGElement>) {
       {/* Left windshield */}
       <LightTooltip title="Left windshield">
         <path
+          className={styles.part}
           onClick={() => onPartClick("leftWindshield")}
           d="M43.148 295.63l16.536 75.595s0 141.74-2.362 144.1c-2.363 2.362-21.261 42.521-21.261 42.521s4.724-257.49 7.087-262.22z"
           fillRule="evenodd"
           fillOpacity={0.686}
           stroke="#000"
           strokeWidth="1pt"
-          fill={getGrillDamageColor("leftWindshield")}
+          fill={getWindshieldDamageColor("leftWindshield")}
         />
       </LightTooltip>
 
@@ -382,6 +394,7 @@ function CarTopView(props: CarProps & SVGProps<SVGSVGElement>) {
       {/* Right windshield */}
       <LightTooltip title="Right windshield">
         <path
+          className={styles.part}
           onClick={() => onPartClick("rightWindshield")}
           d="M317.18 290.91l-16.536 75.595s0 141.74 2.362 144.1c2.363 2.362 21.261 42.521 21.261 42.521s-4.724-257.49-7.087-262.22z"
           fillRule="evenodd"
