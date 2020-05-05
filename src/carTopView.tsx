@@ -249,10 +249,14 @@ function CarTopView(props: CarProps & SVGProps<SVGSVGElement>) {
           className={styles.part}
           onClick={() => onPartClick("frontBonnet")}
           d="M37.198 44.521c-11.667 18.667-10.816 196.22 7.851 210.22 18.03-14.851 122.48-28.646 142.34-27.364 20.288-1.492 99.694 8.055 124.09 22.697 6.577 2.13 19.727-205.55 1.059-219.55-58.34-16.344-252.01-16.344-275.34 13.99z"
-          strokeOpacity={0.459}
+          strokeOpacity={1}
           fillRule="evenodd"
-          stroke="#000"
+          strokeWidth={
+            damages.frontBonnet.severity === "NO_DAMAGE" ? "1px" : "3px"
+          }
+          stroke={getDamageColor("frontBonnet") || "grey"}
           fill={getDamageColor("frontBonnet") || CAR_COLOR}
+          fillOpacity={damages.frontBonnet.severity === "NO_DAMAGE" ? 1 : 0.2}
         />
       </LightTooltip>
 

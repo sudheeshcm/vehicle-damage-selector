@@ -14,72 +14,58 @@ export const SEVERITY = ["NO_DAMAGE", "LOW", "MEDIUM", "HIGH"];
 
 export const INITIAL_DAMAGES: IDamages = {
   frontBonnet: {
-    damaged: false,
     severity: "NO_DAMAGE",
     damageType: "",
   },
   frontWindshield: {
-    damaged: false,
     severity: "NO_DAMAGE",
     damageType: "",
   },
   rearWindshield: {
-    damaged: false,
     severity: "NO_DAMAGE",
     damageType: "",
   },
   rightMirror: {
-    damaged: false,
     severity: "NO_DAMAGE",
     damageType: "",
   },
   leftMirror: {
-    damaged: false,
     severity: "NO_DAMAGE",
     damageType: "",
   },
   leftHeadlamp: {
-    damaged: false,
     severity: "NO_DAMAGE",
     damageType: "",
   },
   rightHeadlamp: {
-    damaged: false,
     severity: "NO_DAMAGE",
     damageType: "",
   },
   frontGrill: {
-    damaged: false,
     severity: "NO_DAMAGE",
     damageType: "",
   },
   leftWindshield: {
-    damaged: false,
     severity: "NO_DAMAGE",
     damageType: "",
   },
   rightWindshield: {
-    damaged: false,
     severity: "NO_DAMAGE",
     damageType: "",
   },
   frontLeftTyre: {
-    damaged: false,
     severity: "NO_DAMAGE",
     damageType: "",
   },
   frontRightTyre: {
-    damaged: false,
     severity: "NO_DAMAGE",
     damageType: "",
   },
   rearLeftTyre: {
-    damaged: false,
     severity: "NO_DAMAGE",
     damageType: "",
   },
   rearRightTyre: {
-    damaged: false,
     severity: "NO_DAMAGE",
     damageType: "",
   },

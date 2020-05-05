@@ -1,5 +1,4 @@
 export interface IDamage {
-    damaged: boolean;
     severity: string;
     damageType: string;
 }
