@@ -27,7 +27,7 @@ const HEADLAMP_COLOR = "#2e87cf";
 const TIRE_COLOR = "black";
 const GRILL_COLOR = "grey";
 
-const LightTooltip = withStyles((theme: Theme) => ({
+const LightTooltip: any = withStyles((theme: Theme) => ({
   tooltip: {
     backgroundColor: theme.palette.common.white,
     color: "rgba(0, 0, 0, 0.87)",
